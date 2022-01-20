@@ -13,6 +13,7 @@ class NeuralNetwork:
         # TODO (Implement FCNNs architecture here)
         pass
 
+
     def activation(self, x):
         """
         The activation function of our neural network, e.g., Sigmoid, ReLU.
@@ -20,7 +21,7 @@ class NeuralNetwork:
         :return: Vector after applying activation function.
         """
         # TODO (Implement activation function here)
-        pass
+        return 1 / (1 + np.exp(-x))
 
     def forward(self, x):
         """
