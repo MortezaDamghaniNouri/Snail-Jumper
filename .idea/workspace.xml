@@ -4,7 +4,6 @@
     <list default="true" id="a3dc8c12-92d5-488d-b337-5847a6f67800" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/evolution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +39,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642662189252</updated>
-      <workItem from="1642662190689" duration="12563000" />
+      <workItem from="1642662190689" duration="14605000" />
     </task>
     <servers />
   </component>

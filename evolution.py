@@ -14,28 +14,17 @@ class Evolution:
         :param players: list of players in the previous generation
         :param num_players: number of players that we return
         """
-
-
         # Top-k algorithm is implemented here by using bubble sort
         i = len(players) - 1
         while i > 0:
             j = 0
             while j <= (i - 1):
-
-
-
+                if players[j].fitness > players[j + 1].fitness:
+                    temp = players[j + 1]
+                    players[j + 1] = players[j]
+                    players[j] = temp
                 j += 1
-
-
-
-
             i = i - 1
-
-
-
-
-
-
 
         # TODO (Additional: Implement roulette wheel here)
         # TODO (Additional: Implement SUS here)
@@ -46,7 +35,6 @@ class Evolution:
     def generate_new_population(self, num_players, prev_players=None):
         """
         Gets survivors and returns a list containing num_players number of children.
-
         :param num_players: Length of returning list
         :param prev_players: List of survivors
         :return: A list of children
