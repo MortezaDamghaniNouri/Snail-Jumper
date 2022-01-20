@@ -51,8 +51,6 @@ class Player(pygame.sprite.Sprite):
         :param player_x: 'x' position of the player
         :param player_y: 'y' position of the player
         """
-        # TODO (change player's gravity here by calling self.change_gravity)
-
         # This is a test code that changes the gravity based on a random number. Remove it before your implementation.
         # if random.randint(0, 2):
         #     self.change_gravity('left')

@@ -11,11 +11,32 @@ class Evolution:
         """
         Gets list of previous and current players (μ + λ) and returns num_players number of players based on their
         fitness value.
-
         :param players: list of players in the previous generation
         :param num_players: number of players that we return
         """
-        # TODO (Implement top-k algorithm here)
+
+
+        # Top-k algorithm is implemented here by using bubble sort
+        i = len(players) - 1
+        while i > 0:
+            j = 0
+            while j <= (i - 1):
+
+
+
+                j += 1
+
+
+
+
+            i = i - 1
+
+
+
+
+
+
+
         # TODO (Additional: Implement roulette wheel here)
         # TODO (Additional: Implement SUS here)
 
