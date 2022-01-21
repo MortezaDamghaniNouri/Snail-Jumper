@@ -43,8 +43,53 @@ class Evolution:
         if first_generation:
             return [Player(self.game_mode) for _ in range(num_players)]
         else:
-            # TODO ( Parent selection and child generation )
-            new_players = prev_players  # DELETE THIS AFTER YOUR IMPLEMENTATION
+
+            new_players = []
+            i = 0
+            while i < len(prev_players):
+                parent1 = self.clone_player(prev_players[i])
+                parent2 = self.clone_player(prev_players[i + 1])
+                child1 = self.clone_player(parent1)
+                child2 = self.clone_player(parent2)
+
+                layer_sizes = parent1.nn.layer_sizes
+                # Generating child1
+                j = layer_sizes[0] / 2
+                while j < layer_sizes[0]:
+                    child1.nn.weights1[j] = parent2.nn.weights1[j]
+                    j += 1
+
+                j = layer_sizes[1] / 2
+                while j < layer_sizes[1]:
+                    child1.nn.biases1[j] = parent2.nn.biases1[j]
+                    child1.nn.weights2[j] = parent2.nn.weights2[j]
+                    j += 1
+
+                j = layer_sizes[2] / 2
+                while j < layer_sizes[2]:
+                    child1.nn.biases2[j] = parent2.nn.biases2[j]
+                    j += 1
+
+                # Generating child2
+                j = 0
+                while j < (layer_sizes[0] / 2):
+                    child2.nn.weights1[j] = parent1.nn.weights1[j]
+                    j += 1
+
+                j = 0
+                while j < (layer_sizes[1] / 2):
+                    child2.nn.biases1[j] = parent1.nn.biases1[j]
+                    child2.nn.weights2[j] = parent1.nn.weights2[j]
+                    j += 1
+
+                j = 0
+                while j < (layer_sizes[2] / 2):
+                    child2.nn.biases2[j] = parent1.nn.biases2[j]
+                    j += 1
+
+                new_players.append(child1)
+                new_players.append(child2)
+                i += 2
             return new_players
 
     def clone_player(self, player):
