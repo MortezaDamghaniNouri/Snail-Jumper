@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3dc8c12-92d5-488d-b337-5847a6f67800" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stat_file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/evolution.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nn.py" beforeDir="false" afterPath="$PROJECT_DIR$/nn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stat_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/stat_file.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1642662189252</updated>
       <workItem from="1642662190689" duration="15517000" />
-      <workItem from="1642769424990" duration="10095000" />
+      <workItem from="1642769424990" duration="11328000" />
     </task>
     <servers />
   </component>
@@ -110,25 +109,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="165" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1642664994333" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1642788935878">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1642790178547">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642788935878" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1642788935878">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642790178547" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1642790178547">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1642788935878" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1642788935878">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1642790178547" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1642790178547">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1642788935878" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1642788935878">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1642790178547" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1642790178547">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1642788935878" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1642790178547" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Computational_Intelligence_Project_3_Neuroevolution_Game$game.coverage" NAME="game Coverage Results" MODIFIED="1642787293753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Computational_Intelligence_Project_3_Neuroevolution_Game$game.coverage" NAME="game Coverage Results" MODIFIED="1642790178542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Computational_Intelligence_Project_3_Neuroevolution_Game$game__1_.coverage" NAME="game (1) Coverage Results" MODIFIED="1642786953725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Computer Engineering/Semesters/9/Computational Intelligence/Projects/Evolution/Snail Jumper/SnailJumper-master" />
   </component>
 </project>

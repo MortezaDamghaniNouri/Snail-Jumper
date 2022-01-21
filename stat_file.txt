@@ -7,3 +7,15 @@
 <Player Sprite(in 0 groups)> 28.036666666666665 <Player Sprite(in 0 groups)>
 <Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
 <Player Sprite(in 0 groups)> 28.036666666666665 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 29.31 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 29.31 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 29.31 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 29.313333333333333 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 18.505 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 18.006666666666668 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 18.653333333333332 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 18.036666666666665 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 18.003333333333334 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 18.036666666666665 <Player Sprite(in 0 groups)>

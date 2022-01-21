@@ -11,11 +11,15 @@ class NeuralNetwork:
         3 neurons in the input layer, 10 neurons in the hidden layer, and 2 neurons in the output layer.
         """
         # This part is implemented based on this hypothesis that layer_sizes is always a list with three elements
-        self.layer_sizes = layer_sizes # This field is used for generating children and parents weights and biases are divided according to these numbers
+        self.layer_sizes = layer_sizes  # This field is used for generating children and parents weights and biases are divided according to these numbers
         self.weights1 = np.random.normal(size=(layer_sizes[0], layer_sizes[1]))
+        print("weights1: " + str(self.weights1))
         self.biases1 = np.zeros((1, layer_sizes[1]))
+        print("biases1: " + str(self.biases1))
         self.weights2 = np.random.normal(size=(layer_sizes[1], layer_sizes[2]))
+        print("weights2: " + str(self.weights2))
         self.biases2 = np.zeros((1, layer_sizes[2]))
+        print("biases2: " + str(self.biases2))
 
 
     # This function normalizes the input_list elements by passing them to activation function and returns the list of normal inputs

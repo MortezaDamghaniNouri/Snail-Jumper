@@ -74,20 +74,20 @@ class Evolution:
 
                 layer_sizes = parent1.nn.layer_sizes
                 # Generating child1
-                j = layer_sizes[0] / 2
+                j = int(layer_sizes[0] / 2)
                 while j < layer_sizes[0]:
                     child1.nn.weights1[j] = parent2.nn.weights1[j]
                     j += 1
 
-                j = layer_sizes[1] / 2
+                j = int(layer_sizes[1] / 2)
                 while j < layer_sizes[1]:
-                    child1.nn.biases1[j] = parent2.nn.biases1[j]
+                    child1.nn.biases1[0][j] = parent2.nn.biases1[0][j]
                     child1.nn.weights2[j] = parent2.nn.weights2[j]
                     j += 1
 
-                j = layer_sizes[2] / 2
+                j = int(layer_sizes[2] / 2)
                 while j < layer_sizes[2]:
-                    child1.nn.biases2[j] = parent2.nn.biases2[j]
+                    child1.nn.biases2[0][j] = parent2.nn.biases2[0][j]
                     j += 1
 
                 # Generating child2
@@ -98,13 +98,13 @@ class Evolution:
 
                 j = 0
                 while j < (layer_sizes[1] / 2):
-                    child2.nn.biases1[j] = parent1.nn.biases1[j]
+                    child2.nn.biases1[0][j] = parent1.nn.biases1[0][j]
                     child2.nn.weights2[j] = parent1.nn.weights2[j]
                     j += 1
 
                 j = 0
                 while j < (layer_sizes[2] / 2):
-                    child2.nn.biases2[j] = parent1.nn.biases2[j]
+                    child2.nn.biases2[0][j] = parent1.nn.biases2[0][j]
                     j += 1
 
                 new_players.append(child1)
