@@ -39,7 +39,7 @@ class Evolution:
 
         # Writing statistics on a file for part 5 (bonus part)
         stat_file = open("stat_file.txt", "at")
-        stat_file.write(str(players[len(players) - 1]) + " " + str(self.average_fitness_calculator(players)) + " " + str(players[0]) + "\n")
+        stat_file.write(str(players[len(players) - 1].fitness) + " " + str(self.average_fitness_calculator(players)) + " " + str(players[0].fitness) + "\n")
         stat_file.close()
 
 

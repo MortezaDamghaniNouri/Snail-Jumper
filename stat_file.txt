@@ -1,21 +1,27 @@
-<Player Sprite(in 0 groups)> 97.74333333333334 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 28.54 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 28.036666666666665 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 28.54 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 28.036666666666665 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 28.036666666666665 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 29.31 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 29.31 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 29.31 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 29.313333333333333 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 18.505 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 18.006666666666668 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 18.653333333333332 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 18.036666666666665 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 18.003333333333334 <Player Sprite(in 0 groups)>
-<Player Sprite(in 0 groups)> 18.036666666666665 <Player Sprite(in 0 groups)>
+113 24.506666666666668 24
+113 26.186666666666667 23
+162 21.97 19
+113 24.506666666666668 24
+95 80.34 74
+170 153.525 142
+113 27.546666666666667 26
+114 18.903333333333332 18
+24 18.02 18
+24 18.02 18
+24 18.02 18
+24 18.02 18
+24 18.02 18
+24 18.02 18
+24 18.02 18
+24 18.02 18
+24 18.02 18
+24 18.02 18
+24 18.02 18
+209 28.036666666666665 24
+208 19.615 18
+161 18.573333333333334 18
+161 18.573333333333334 18
+161 18.573333333333334 18
+161 18.573333333333334 18
+161 18.573333333333334 18
+161 18.573333333333334 18
