@@ -7,6 +7,17 @@ class Evolution:
     def __init__(self):
         self.game_mode = "Neuroevolution"
 
+
+
+
+    # This function calculates the average fitness of the input list
+    def average_fitness_calculator(self, input_players_list):
+        summation = 0
+        for i in input_players_list:
+            summation += i.fitness
+        return summation / len(input_players_list)
+
+
     def next_population_selection(self, players, num_players):
         """
         Gets list of previous and current players (μ + λ) and returns num_players number of players based on their
@@ -25,6 +36,15 @@ class Evolution:
                     players[j] = temp
                 j += 1
             i = i - 1
+
+        # Writing statistics on a file for part 5 (bonus part)
+        stat_file = open("stat_file.txt", "at")
+        stat_file.write(str(players[len(players) - 1]) + " " + str(self.average_fitness_calculator(players)) + " " + str(players[0]) + "\n")
+        stat_file.close()
+
+
+
+
 
         # TODO (Additional: Implement roulette wheel here)
         # TODO (Additional: Implement SUS here)

@@ -1,0 +1,9 @@
+<Player Sprite(in 0 groups)> 97.74333333333334 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 28.54 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 28.036666666666665 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 28.54 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 28.036666666666665 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 28.536666666666665 <Player Sprite(in 0 groups)>
+<Player Sprite(in 0 groups)> 28.036666666666665 <Player Sprite(in 0 groups)>

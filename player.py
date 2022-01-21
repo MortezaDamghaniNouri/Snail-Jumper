@@ -56,13 +56,14 @@ class Player(pygame.sprite.Sprite):
         #     self.change_gravity('left')
         # else:
         #     self.change_gravity('right')
-        maximum_input = max(player_x, player_y, obstacles[0]["x"], obstacles[0]["y"])
-        neural_network_input = [player_x / maximum_input, player_y / maximum_input, obstacles[0]["x"] / maximum_input, obstacles[0]["y"] / maximum_input]
-        neural_network_output = self.nn.forward(neural_network_input)
-        if neural_network_output[0] >= neural_network_output[1]:
-            self.change_gravity("right")
-        else:
-            self.change_gravity("left")
+        if len(obstacles) != 0:     # This if is here because at the beginning the size of obstacles list is zero because there is no obstacle
+            maximum_input = max(player_x, player_y, obstacles[0]["x"], obstacles[0]["y"])
+            neural_network_input = [player_x / maximum_input, player_y / maximum_input, obstacles[0]["x"] / maximum_input, obstacles[0]["y"] / maximum_input]
+            neural_network_output = self.nn.forward(neural_network_input)
+            if neural_network_output[0] >= neural_network_output[1]:
+                self.change_gravity("right")
+            else:
+                self.change_gravity("left")
 
 
 

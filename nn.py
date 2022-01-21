@@ -40,7 +40,7 @@ class NeuralNetwork:
         second_layer_output = (x @ self.weights1) + self.biases1
         second_layer_normal_output = self.normalizer(second_layer_output)
         third_layer_output = (second_layer_normal_output @ self.weights2) + self.biases2
-        third_layer_normal_output = self.normalizer(third_layer_output)
+        third_layer_normal_output = self.normalizer(third_layer_output[0])
         return third_layer_normal_output
 
 
