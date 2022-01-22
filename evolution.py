@@ -47,9 +47,6 @@ class Evolution:
         stat_file.close()
 
 
-
-
-
         # TODO (Additional: Implement roulette wheel here)
         # TODO (Additional: Implement SUS here)
 
