@@ -1,7 +1,7 @@
 import copy
 import random
 from player import Player
-
+import numpy as np
 
 class Evolution:
     def __init__(self):
@@ -112,19 +112,103 @@ class Evolution:
                         child2.nn.biases2[0][j] = parent1.nn.biases2[0][j]
                         j += 1
 
+                # Weights1 of child1 mutation is implemented here
+                m = 0
+                while m < layer_sizes[0]:
+                    n = 0
+                    while n < layer_sizes[1]:
+                        random_number = random.uniform(0, 1)
+                        if random_number < 0.1:
+                            child1.nn.weights1[m][n] = np.random.normal(size=(1, 1))[0][0]
+                        n += 1
+                    m += 1
+
+                # Weights1 of child2 mutation is implemented here
+                m = 0
+                while m < layer_sizes[0]:
+                    n = 0
+                    while n < layer_sizes[1]:
+                        random_number = random.uniform(0, 1)
+                        if random_number < 0.1:
+                            child2.nn.weights1[m][n] = np.random.normal(size=(1, 1))[0][0]
+                        n += 1
+                    m += 1
+
+                # Weights2 of child1 mutation is implemented here
+                m = 0
+                while m < layer_sizes[1]:
+                    n = 0
+                    while n < layer_sizes[2]:
+                        random_number = random.uniform(0, 1)
+                        if random_number < 0.1:
+                            child1.nn.weights2[m][n] = np.random.normal(size=(1, 1))[0][0]
+                        n += 1
+                    m += 1
+
+                # Weights2 of child2 mutation is implemented here
+                m = 0
+                while m < layer_sizes[1]:
+                    n = 0
+                    while n < layer_sizes[2]:
+                        random_number = random.uniform(0, 1)
+                        if random_number < 0.1:
+                            child2.nn.weights2[m][n] = np.random.normal(size=(1, 1))[0][0]
+                        n += 1
+                    m += 1
+
+                # Biases1 of child1 mutation is implemented here
+                m = 0
+                while m < layer_sizes[1]:
+                    random_number = random.uniform(0, 1)
+                    if random_number < 0.4:
+                        child1.nn.biases1[0][m] = np.random.normal(size=(1, 1))[0][0]
+                    m += 1
+
+                # Biases2 of child1 mutation is implemented here
+                m = 0
+                while m < layer_sizes[2]:
+                    random_number = random.uniform(0, 1)
+                    if random_number < 0.4:
+                        child1.nn.biases2[0][m] = np.random.normal(size=(1, 1))[0][0]
+                    m += 1
+
+                # Biases1 of child2 mutation is implemented here
+                m = 0
+                while m < layer_sizes[1]:
+                    random_number = random.uniform(0, 1)
+                    if random_number < 0.4:
+                        child2.nn.biases1[0][m] = np.random.normal(size=(1, 1))[0][0]
+                    m += 1
+
+                # Biases2 of child2 mutation is implemented here
+                m = 0
+                while m < layer_sizes[2]:
+                    random_number = random.uniform(0, 1)
+                    if random_number < 0.4:
+                        child2.nn.biases2[0][m] = np.random.normal(size=(1, 1))[0][0]
+                    m += 1
+
+
+
+
+
+
+
+
+
                 new_players.append(child1)
                 new_players.append(child2)
-                # if i % 2 == 0:
-                    #   print("parent1 weights1: " + str(parent1.nn.weights1))
-                    #   print("parent2 weights1: " + str(parent2.nn.weights1))
-                    #   print("child1 weights1: " + str(child1.nn.weights1))
-                    #   print("child2 weights1: " + str(child2.nn.weights1))
-                    #   print("====")
-                    #   print("parent1 biases2: " + str(parent1.nn.biases2))
-                    #   print("parent2 biases2: " + str(parent2.nn.biases2))
-                    #   print("child1 biases2: " + str(child1.nn.biases2))
-                    #   print("child2 biases2: " + str(child2.nn.biases2))
-                    #   print("=======================================")
+                if i % 2 == 0:
+                    print("parent1 weights1: " + str(parent1.nn.weights1))
+                    print("parent2 weights1: " + str(parent2.nn.weights1))
+                    print("child1 weights1: " + str(child1.nn.weights1))
+                    print("child2 weights1: " + str(child2.nn.weights1))
+                    print("====")
+                    print("parent1 biases2: " + str(parent1.nn.biases2))
+                    print("parent2 biases2: " + str(parent2.nn.biases2))
+                    print("child1 biases2: " + str(child1.nn.biases2))
+                    print("child2 biases2: " + str(child2.nn.biases2))
+                    print("=======================================")
 
 
 
