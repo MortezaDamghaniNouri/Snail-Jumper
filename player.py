@@ -35,7 +35,7 @@ class Player(pygame.sprite.Sprite):
         if self.game_mode == "Neuroevolution":
             self.fitness = 0  # Initial fitness
 
-            layer_sizes = [4, 10, 2]  # TODO (Design your architecture here by changing the values)
+            layer_sizes = [6, 20, 2]  # TODO (Design your architecture here by changing the values)
             self.nn = NeuralNetwork(layer_sizes)
 
     def think(self, screen_width, screen_height, obstacles, player_x, player_y):
@@ -56,9 +56,9 @@ class Player(pygame.sprite.Sprite):
         #     self.change_gravity('left')
         # else:
         #     self.change_gravity('right')
-        if len(obstacles) >= 1:     # This if is here because at the beginning the size of obstacles list is zero because there is no obstacle
-            maximum_input = max(player_x, player_y, obstacles[0]["x"], obstacles[0]["y"])
-            neural_network_input = [player_x / maximum_input, player_y / maximum_input, obstacles[0]["x"] / maximum_input, obstacles[0]["y"] / maximum_input]
+        if len(obstacles) >= 2:     # This if is here because at the beginning the size of obstacles list is zero because there is no obstacle
+            maximum_input = max(player_x, player_y, obstacles[0]["x"], obstacles[0]["y"], obstacles[1]["x"], obstacles[1]["y"])
+            neural_network_input = [obstacles[0]["x"] / maximum_input, obstacles[0]["y"] / maximum_input, obstacles[1]["x"] / maximum_input, obstacles[1]["y"] / maximum_input, player_x / maximum_input, player_y / maximum_input]
             neural_network_output = self.nn.forward(neural_network_input)
             if neural_network_output[0] >= neural_network_output[1]:
                 self.change_gravity("right")

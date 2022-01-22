@@ -37,9 +37,13 @@ class Evolution:
                 j += 1
             i = i - 1
 
+
+
+
+        players.reverse()
         # Writing statistics on a file for part 5 (bonus part)
         stat_file = open("stat_file.txt", "at")
-        stat_file.write(str(players[len(players) - 1].fitness) + " " + str(self.average_fitness_calculator(players)) + " " + str(players[0].fitness) + "\n")
+        stat_file.write(str(players[0].fitness) + " " + str(self.average_fitness_calculator(players)) + " " + str(players[len(players) - 1].fitness) + "\n")
         stat_file.close()
 
 
@@ -85,50 +89,6 @@ class Evolution:
                     child2.nn.weights1 = parent1.nn.weights1
                     child2.nn.biases1 = parent1.nn.biases1
 
-                # # Weights1 of child1 mutation is implemented here
-                # m = 0
-                # while m < layer_sizes[0]:
-                #     n = 0
-                #     while n < layer_sizes[1]:
-                #         random_number = random.uniform(0, 1)
-                #         if random_number < 0.1:
-                #             child1.nn.weights1[m][n] = np.random.normal(size=(1, 1))[0][0]
-                #         n += 1
-                #     m += 1
-#
-                # # Weights1 of child2 mutation is implemented here
-                # m = 0
-                # while m < layer_sizes[0]:
-                #     n = 0
-                #     while n < layer_sizes[1]:
-                #         random_number = random.uniform(0, 1)
-                #         if random_number < 0.1:
-                #             child2.nn.weights1[m][n] = np.random.normal(size=(1, 1))[0][0]
-                #         n += 1
-                #     m += 1
-#
-                # # Weights2 of child1 mutation is implemented here
-                # m = 0
-                # while m < layer_sizes[1]:
-                #     n = 0
-                #     while n < layer_sizes[2]:
-                #         random_number = random.uniform(0, 1)
-                #         if random_number < 0.1:
-                #             child1.nn.weights2[m][n] = np.random.normal(size=(1, 1))[0][0]
-                #         n += 1
-                #     m += 1
-#
-                # # Weights2 of child2 mutation is implemented here
-                # m = 0
-                # while m < layer_sizes[1]:
-                #     n = 0
-                #     while n < layer_sizes[2]:
-                #         random_number = random.uniform(0, 1)
-                #         if random_number < 0.1:
-                #             child2.nn.weights2[m][n] = np.random.normal(size=(1, 1))[0][0]
-                #         n += 1
-                #     m += 1
-
                 # Biases1 of child1 mutation is implemented here
                 m = 0
                 while m < layer_sizes[1]:
@@ -171,18 +131,6 @@ class Evolution:
 
                 new_players.append(child1)
                 new_players.append(child2)
-                if i % 2 == 0:
-                    print("parent1 weights1: " + str(parent1.nn.weights1))
-                    print("parent2 weights1: " + str(parent2.nn.weights1))
-                    print("child1 weights1: " + str(child1.nn.weights1))
-                    print("child2 weights1: " + str(child2.nn.weights1))
-                    print("====")
-                    print("parent1 biases2: " + str(parent1.nn.biases2))
-                    print("parent2 biases2: " + str(parent2.nn.biases2))
-                    print("child1 biases2: " + str(child1.nn.biases2))
-                    print("child2 biases2: " + str(child2.nn.biases2))
-                    print("=======================================")
-
 
 
                 i += 2
