@@ -109,6 +109,20 @@ class Evolution:
 
                 new_players.append(child1)
                 new_players.append(child2)
+                if i % 2 == 0:
+                    print("parent1 weights1: " + str(parent1.nn.weights1))
+                    print("parent2 weights1: " + str(parent2.nn.weights1))
+                    print("child1 weights1: " + str(child1.nn.weights1))
+                    print("child2 weights1: " + str(child2.nn.weights1))
+                    print("====")
+                    print("parent1 biases2: " + str(parent1.nn.biases2))
+                    print("parent2 biases2: " + str(parent2.nn.biases2))
+                    print("child1 biases2: " + str(child1.nn.biases2))
+                    print("child2 biases2: " + str(child2.nn.biases2))
+                    print("=======================================")
+
+
+
                 i += 2
             return new_players
 
