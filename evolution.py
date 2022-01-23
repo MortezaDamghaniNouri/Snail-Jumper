@@ -7,9 +7,6 @@ class Evolution:
     def __init__(self):
         self.game_mode = "Neuroevolution"
 
-
-
-
     # This function calculates the average fitness of the input list
     def average_calculator(self, input_players_list):
         summation = 0

@@ -1,10 +1,9 @@
-import random
-
 import pygame
 from variables import global_variables
 from nn import NeuralNetwork
-
-
+import statistics
+import math
+import sys
 class Player(pygame.sprite.Sprite):
     def __init__(self, game_mode):
         super().__init__()
@@ -59,6 +58,16 @@ class Player(pygame.sprite.Sprite):
         if len(obstacles) >= 2:     # This if is here because at the beginning the size of obstacles list is zero because there is no obstacle
             maximum_input = max(player_x, player_y, obstacles[0]["x"], obstacles[0]["y"])
             neural_network_input = [obstacles[0]["x"] / maximum_input, obstacles[0]["y"] / maximum_input, player_x / maximum_input, player_y / maximum_input]
+
+            # Bonus part for batch normalization is implemented here
+            # inputs = [obstacles[0]["x"], obstacles[0]["y"], player_x, player_y]
+            # inputs_mean = statistics.mean(inputs)
+            # sqrt_res = math.sqrt(statistics.variance(inputs) + sys.float_info.min)  # sys.float_info is the smallest float number in this system
+            # neural_network_input = []
+            # for m in inputs:
+            #     neural_network_input.append((m - inputs_mean) / sqrt_res)
+
+
             neural_network_output = self.nn.forward(neural_network_input)
             if neural_network_output[0] >= neural_network_output[1]:
                 self.change_gravity("left")
