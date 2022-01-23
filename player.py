@@ -66,17 +66,6 @@ class Player(pygame.sprite.Sprite):
                 self.change_gravity("right")
 
 
-
-
-
-
-
-
-
-
-
-
-
     def change_gravity(self, new_gravity):
         """
         Changes the self.player_gravity based on the input parameter.

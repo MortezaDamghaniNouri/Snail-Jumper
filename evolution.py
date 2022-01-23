@@ -11,7 +11,7 @@ class Evolution:
 
 
     # This function calculates the average fitness of the input list
-    def average_fitness_calculator(self, input_players_list):
+    def average_calculator(self, input_players_list):
         summation = 0
         for i in input_players_list:
             summation += i.fitness
@@ -25,13 +25,13 @@ class Evolution:
         :param players: list of players in the previous generation
         :param num_players: number of players that we return
         """
-        # Top-k algorithm is implemented here by using bubble sort
+        # Top-k algorithm
         players = sorted(players, key=lambda player: player.fitness, reverse=True)
 
-        # Writing statistics on a file for part 5 (bonus part)
-        stat_file = open("stat_file.txt", "at")
-        stat_file.write(str(players[0].fitness) + " " + str(self.average_fitness_calculator(players)) + " " + str(players[len(players) - 1].fitness) + "\n")
-        stat_file.close()
+        # Writing statistics of generations on a file
+        generations_stat_file = open("generations_stat_file.txt", "at")
+        generations_stat_file.write(str(players[0].fitness) + " " + str(self.average_calculator(players)) + " " + str(players[len(players) - 1].fitness) + "\n")
+        generations_stat_file.close()
 
 
         # TODO (Additional: Implement roulette wheel here)
@@ -62,15 +62,13 @@ class Evolution:
 
                 layer_sizes = parent1.nn.layer_sizes
                 # Generating child1
-                child1_random_number = random.uniform(0,
-                                                      1)  # The probability of happening cross over for child1 is controlled by this random number
+                child1_random_number = random.uniform(0, 1)  # The probability of happening cross over for child1 is controlled by this random number
                 if child1_random_number <= 0.8:
                     child1.nn.weights2 = parent2.nn.weights2
                     child1.nn.biases2 = parent2.nn.biases2
 
                 # Generating child2
-                child2_random_number = random.uniform(0,
-                                                      1)  # The probability of happening cross over for child2 is controlled by this random number
+                child2_random_number = random.uniform(0, 1)  # The probability of happening cross over for child2 is controlled by this random number
                 if child2_random_number <= 0.8:
                     child2.nn.weights1 = parent1.nn.weights1
                     child2.nn.biases1 = parent1.nn.biases1
@@ -107,13 +105,6 @@ class Evolution:
                     if random_number < 0.5:
                         child2.nn.biases2[0][m] = np.random.normal(size=(1, 1))[0][0]
                     m += 1
-
-
-
-
-
-
-
 
 
                 new_players.append(child1)
