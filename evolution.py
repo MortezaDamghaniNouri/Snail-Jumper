@@ -181,7 +181,7 @@ class Evolution:
             #         child2.nn.weights1 = parent1.nn.weights1
             #         child2.nn.biases1 = parent1.nn.biases1
 #
-            #     # Biases1 of child1 mutation is implemented here
+            #     # Mutation of Biases1 of child1
             #     m = 0
             #     while m < layer_sizes[1]:
             #         random_number = random.uniform(0, 1)
@@ -189,7 +189,7 @@ class Evolution:
             #             child1.nn.biases1[0][m] = np.random.normal(size=(1, 1))[0][0]
             #         m += 1
 #
-            #     # Biases2 of child1 mutation is implemented here
+            #     # Mutation of Biases2 of child1
             #     m = 0
             #     while m < layer_sizes[2]:
             #         random_number = random.uniform(0, 1)
@@ -197,7 +197,7 @@ class Evolution:
             #             child1.nn.biases2[0][m] = np.random.normal(size=(1, 1))[0][0]
             #         m += 1
 #
-            #     # Biases1 of child2 mutation is implemented here
+            #     # Mutation of Biases1 of child2
             #     m = 0
             #     while m < layer_sizes[1]:
             #         random_number = random.uniform(0, 1)
@@ -205,7 +205,7 @@ class Evolution:
             #             child2.nn.biases1[0][m] = np.random.normal(size=(1, 1))[0][0]
             #         m += 1
 #
-            #     # Biases2 of child2 mutation is implemented here
+            #     # Mutation of Biases2 of child2
             #     m = 0
             #     while m < layer_sizes[2]:
             #         random_number = random.uniform(0, 1)
@@ -239,28 +239,28 @@ class Evolution:
                 if child2_random_number <= 0.8:
                     child2.nn.weights1 = parent1.nn.weights1
                     child2.nn.biases1 = parent1.nn.biases1
-                # Biases1 of child1 mutation is implemented here
+                # Mutation of Biases1 of child1
                 m = 0
                 while m < layer_sizes[1]:
                     random_number = random.uniform(0, 1)
                     if random_number < 0.5:
                         child1.nn.biases1[0][m] = np.random.normal(size=(1, 1))[0][0]
                     m += 1
-                # Biases2 of child1 mutation is implemented here
+                # Mutation of Biases2 of child1
                 m = 0
                 while m < layer_sizes[2]:
                     random_number = random.uniform(0, 1)
                     if random_number < 0.5:
                         child1.nn.biases2[0][m] = np.random.normal(size=(1, 1))[0][0]
                     m += 1
-                # Biases1 of child2 mutation is implemented here
+                # Mutation of Biases1 of child2
                 m = 0
                 while m < layer_sizes[1]:
                     random_number = random.uniform(0, 1)
                     if random_number < 0.5:
                         child2.nn.biases1[0][m] = np.random.normal(size=(1, 1))[0][0]
                     m += 1
-                # Biases2 of child2 mutation is implemented here
+                # Mutation of Biases2 of child2
                 m = 0
                 while m < layer_sizes[2]:
                     random_number = random.uniform(0, 1)
