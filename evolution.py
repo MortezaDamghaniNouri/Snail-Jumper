@@ -26,18 +26,8 @@ class Evolution:
         :param num_players: number of players that we return
         """
         # Top-k algorithm is implemented here by using bubble sort
-        i = len(players) - 1
-        while i > 0:
-            j = 0
-            while j <= (i - 1):
-                if players[j].fitness > players[j + 1].fitness:
-                    temp = players[j + 1]
-                    players[j + 1] = players[j]
-                    players[j] = temp
-                j += 1
-            i = i - 1
+        players = sorted(players, key=lambda player: player.fitness, reverse=True)
 
-        players.reverse()
         # Writing statistics on a file for part 5 (bonus part)
         stat_file = open("stat_file.txt", "at")
         stat_file.write(str(players[0].fitness) + " " + str(self.average_fitness_calculator(players)) + " " + str(players[len(players) - 1].fitness) + "\n")
@@ -72,68 +62,25 @@ class Evolution:
 
                 layer_sizes = parent1.nn.layer_sizes
                 # Generating child1
-                child1_random_number = random.uniform(0, 1)     # The probability of happening cross over for child1 is controlled by this random number
+                child1_random_number = random.uniform(0,
+                                                      1)  # The probability of happening cross over for child1 is controlled by this random number
                 if child1_random_number <= 0.8:
                     child1.nn.weights2 = parent2.nn.weights2
                     child1.nn.biases2 = parent2.nn.biases2
 
                 # Generating child2
-                child2_random_number = random.uniform(0, 1)  # The probability of happening cross over for child2 is controlled by this random number
+                child2_random_number = random.uniform(0,
+                                                      1)  # The probability of happening cross over for child2 is controlled by this random number
                 if child2_random_number <= 0.8:
                     child2.nn.weights1 = parent1.nn.weights1
                     child2.nn.biases1 = parent1.nn.biases1
-
-
-                # Weights1 of child1 mutation is implemented here
-                m = 0
-                while m < layer_sizes[0]:
-                    n = 0
-                    while n < layer_sizes[1]:
-                        random_number = random.uniform(0, 1)
-                        if random_number < 0.1:
-                            child1.nn.weights1[m][n] = np.random.normal(size=(1, 1))[0][0]
-                        n += 1
-                    m += 1
-
-                # Weights1 of child2 mutation is implemented here
-                m = 0
-                while m < layer_sizes[0]:
-                    n = 0
-                    while n < layer_sizes[1]:
-                        random_number = random.uniform(0, 1)
-                        if random_number < 0.1:
-                            child2.nn.weights1[m][n] = np.random.normal(size=(1, 1))[0][0]
-                        n += 1
-                    m += 1
-
-                # Weights2 of child1 mutation is implemented here
-                m = 0
-                while m < layer_sizes[1]:
-                    n = 0
-                    while n < layer_sizes[2]:
-                        random_number = random.uniform(0, 1)
-                        if random_number < 0.1:
-                            child1.nn.weights2[m][n] = np.random.normal(size=(1, 1))[0][0]
-                        n += 1
-                    m += 1
-
-                # Weights2 of child2 mutation is implemented here
-                m = 0
-                while m < layer_sizes[1]:
-                    n = 0
-                    while n < layer_sizes[2]:
-                        random_number = random.uniform(0, 1)
-                        if random_number < 0.1:
-                            child2.nn.weights2[m][n] = np.random.normal(size=(1, 1))[0][0]
-                        n += 1
-                    m += 1
 
 
                 # Biases1 of child1 mutation is implemented here
                 m = 0
                 while m < layer_sizes[1]:
                     random_number = random.uniform(0, 1)
-                    if random_number < 0.4:
+                    if random_number < 0.5:
                         child1.nn.biases1[0][m] = np.random.normal(size=(1, 1))[0][0]
                     m += 1
 
@@ -141,7 +88,7 @@ class Evolution:
                 m = 0
                 while m < layer_sizes[2]:
                     random_number = random.uniform(0, 1)
-                    if random_number < 0.4:
+                    if random_number < 0.5:
                         child1.nn.biases2[0][m] = np.random.normal(size=(1, 1))[0][0]
                     m += 1
 
@@ -149,7 +96,7 @@ class Evolution:
                 m = 0
                 while m < layer_sizes[1]:
                     random_number = random.uniform(0, 1)
-                    if random_number < 0.4:
+                    if random_number < 0.5:
                         child2.nn.biases1[0][m] = np.random.normal(size=(1, 1))[0][0]
                     m += 1
 
@@ -157,7 +104,7 @@ class Evolution:
                 m = 0
                 while m < layer_sizes[2]:
                     random_number = random.uniform(0, 1)
-                    if random_number < 0.4:
+                    if random_number < 0.5:
                         child2.nn.biases2[0][m] = np.random.normal(size=(1, 1))[0][0]
                     m += 1
 
